@@ -1,0 +1,7 @@
+wcs_ajax_town_homepage:
+    path:     /
+    defaults: { _controller: WCSAjaxTownBundle:Default:index }
+
+wcs_ajax_town_index:
+    path:     /
+    defaults: { _controller: WCSAjaxTownBundle:TownController:autocompAction }

@@ -1,0 +1,4 @@
+services:
+#    wcs_ajax_town.example:
+#        class: WCS\AjaxTownBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,11 @@
+wcs_ajax_town_contact:
+    resource: "@WCSAjaxTownBundle/Controller/ContactController.php"
+    type:     annotation
+
+wcs_ajax_town:
+    resource: "@WCSAjaxTownBundle/Resources/config/routing.yml"
+    prefix:   /
+
+wcs_ajax_town_town:
+    resource: "@WCSAjaxTownBundle/Controller/TownController.php"
+    type:     annotation

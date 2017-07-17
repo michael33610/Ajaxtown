@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <div class="container">
+            <h2>Contact creation</h2>
+            {{ form_start(form) }}
+
+                <div class="form-group">
+                    {{ form_label(form.lastName) }}
+                    {{ form_widget(form.lastName, { 'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.lastName) }}
+
+                    {{ form_label(form.firstName) }}
+                    {{ form_widget(form.firstName, { 'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.firstName) }}
+
+
+                    {{ form_label(form.adresse) }}
+                    {{ form_widget(form.adresse, { 'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.adresse) }}
+
+                    {{ form_label(form.postalCode) }}
+                    {{ form_widget(form.postalCode, { 'attr': {'class': 'form-control'} }) }}
+                    {{ form_errors(form.postalCode) }}
+                    <div class="row">
+
+
+                        {{ form_label(form.town) }}
+                        {{ form_widget(form.town, { 'attr': {'class': 'form-control'} }) }}
+                        {{ form_errors(form.town) }}
+
+                        <ul id="autocomplete">
+                            <!--<input type="text" name="town" class="form-control">-->
+                        </ul>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+
+
+            {{ form_end(form) }}
+        </div>
+
+
+
+
+
+
+<ul>
+<li>
+<a href="{{ path('contact_index') }}">Back to the list</a>
+</li>
+</ul>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset("autocomplete.js") }}"> </script>
+{% endblock %}
